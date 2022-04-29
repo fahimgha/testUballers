@@ -1,0 +1,166 @@
+/* globales */
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+  line-height: 1.3;
+  background-color: RGB(204, 204, 204);
+}
+/* typohographies */
+h1,
+h2,
+h3,
+label,
+p {
+  padding: 0;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+h1 {
+  font-size: 42px;
+  margin-bottom: 8px;
+}
+h2 {
+  font-weight: 500;
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+h3 {
+  color: black;
+  font-weight: 600;
+  font-size: 20px;
+}
+label {
+  font-size: 15px;
+  font-weight: 600;
+  color: white;
+}
+p {
+  color: black;
+  font-size: 13px;
+  padding: 4px;
+  margin: 0;
+}
+a {
+  font-size: 13px;
+}
+/* login form */
+.login-form {
+  background-color: RGB(69, 96, 157);
+  padding: 30px 30px;
+}
+.login-form input {
+  width: 110%;
+  padding: 8px 7px;
+}
+.login-form form {
+  display: flex;
+}
+.input-submit {
+  display: inline-flex;
+  align-items: center;
+}
+.form-example {
+  margin-right: 60px;
+}
+.submit {
+  background-color: RGB(63, 101, 176);
+  border: 1px solid black;
+  color: white;
+  font-weight: 600;
+}
+/* sign Up form */
+.container {
+  width: 50%;
+  margin: 60px 40px;
+}
+.info-title {
+  min-width: 403px;
+}
+.signup-name {
+  display: flex;
+}
+.signup-name input {
+  display: flex;
+}
+.input-form {
+  display: block;
+  grid-template-rows: auto;
+}
+.input-name-signup input {
+  width: max-content;
+  padding: 12px 12px;
+  font-size: 18px;
+  border: 1px solid gray;
+  border-radius: 5px;
+}
+.input-signup {
+  display: block;
+}
+.input-signup input {
+  width: 419px;
+  padding: 12px 12px;
+  font-size: 18px;
+  border: 1px solid gray;
+  border-radius: 5px;
+  margin-right: 15px;
+}
+small {
+  visibility: hidden;
+}
+.input-signup.success input,
+.input-name-signup.success input {
+  border: 2px solid green;
+}
+.input-signup.error input,
+.input-name-signup.error input {
+  border: 2px solid red;
+}
+
+.date-naissance {
+  margin-top: 20px;
+}
+.date-input {
+  display: inline-flex;
+  margin-top: 10px;
+  align-items: center;
+  min-width: 376px;
+}
+.date-input input {
+  text-align: center;
+  width: 50px;
+  padding: 5px 2px;
+  font-size: 16px;
+  border: 1px solid gray;
+  border-radius: 5px;
+  margin-right: 5px;
+  margin-bottom: 10px;
+}
+.genre-form {
+  display: flex;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.genre-form label {
+  font-size: 20px;
+  font-weight: 500;
+  color: black;
+  margin-right: 25px;
+}
+.condition-utilisation {
+  font-size: 15px;
+  width: 360px;
+}
+.button-inscription {
+  margin-top: 20px;
+  background: linear-gradient(to bottom, #61a54c 0%, #5c8849 100%);
+  padding: 12px 50px;
+  border: 1px solid RGB(97, 165, 78, 0.16);
+  border-radius: 5px;
+  font-size: 16px;
+  color: white;
+  font-weight: 600;
+}
