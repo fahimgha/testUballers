@@ -54,7 +54,7 @@ a {
   padding: 30px 30px;
 }
 .login-form input {
-  width: 115% !important;
+  width: 100%;
   padding: 8px 7px;
 }
 .login-form form {
@@ -85,9 +85,7 @@ a {
 .signup-name {
   display: flex;
 }
-.signup-name input {
-  display: flex;
-}
+
 .input-form {
   display: block;
   grid-template-rows: auto;
@@ -100,6 +98,7 @@ a {
   font-size: 18px;
   border: 1px solid gray;
   border-radius: 5px;
+  margin: 0;
 }
 .input-signup {
   display: block;
