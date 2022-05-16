@@ -1,9 +1,19 @@
+// Login
+let emailLogin = document.getElementById("email");
+let passwordLogin = document.getElementById("login-password");
+
+let buttonLogin = document.getElementById("login-submit");
+// Sign Up
 let secondName = document.getElementById("signup-secondname");
 let firstName = document.getElementById("signup-firstname");
-let email = document.getElementById("signup-email");
+let emailSignUp = document.getElementById("signup-email");
 let confirmEmail = document.getElementById("signup-confirm-email");
-let password = document.getElementById("signup-password");
+let passwordSignUp = document.getElementById("signup-password");
+let birthday = document.getElementById("date");
+
 let form = document.getElementById("form");
+
+let buttonSignUp = document.getElementById("signup-submit");
 
 function validateInput() {
   //check input is empty
@@ -17,42 +27,69 @@ function validateInput() {
   } else {
     onSuccess(firstName);
   }
-  if (email.value.trim() === "") {
-    onError(email, "Le mail ne peut pas être vide");
+  if (emailSignUp.value.trim() === "") {
+    onError(emailSignUp, "Le mail ne peut pas être vide");
   } else {
-    onSuccess(email);
+    onSuccess(emailSignUp);
   }
-  if (confirmEmail.value.trim() !== email.value) {
+  if (
+    confirmEmail.value.trim() !== emailSignUp.value ||
+    confirmEmail.value.trim() === ""
+  ) {
     onError(confirmEmail, "Vous devez confirmer votre mail");
+    console.log(confirmEmail.value);
+    console.log(emailSignUp.value);
   } else {
     onSuccess(confirmEmail);
   }
-  if (password.value.trim() === "") {
-    onError(password, "Le mot de passe ne peut pas être vide");
+  if (passwordSignUp.value.trim() === "") {
+    onError(passwordSignUp, "Le mot de passe ne peut pas être vide");
   } else {
-    onSuccess(password);
-  }
-}
-//sign up success
-function submit() {
-  console.log("test");
-  if (
-    secondName.value.trim() !== "" &&
-    firstName.value.trim() !== "" &&
-    email.value.trim() !== "" &&
-    confirmEmail.value.trim() == email.value &&
-    password.value.trim() !== ""
-  ) {
-    console.log("Inscription réussite");
-  } else {
-    console.log("Vous devez renseigner les champs manquant");
+    onSuccess(passwordSignUp);
   }
 }
 
-document.addEventListener("click", () => {
-  //event.preventDefault();
-  validateInput();
-});
+function validateInputLogin() {
+  //check input is empty
+  if (emailLogin.value.trim() === "") {
+    onError(emailLogin, "Le mail ne peut pas être vide");
+  } else {
+    onSuccess(emailLogin);
+  }
+  if (passwordLogin.value.trim() === "") {
+    onError(passwordLogin, "Le mot de passe ne peut pas être vide");
+  } else {
+    onSuccess(passwordLogin);
+  }
+}
+buttonSignUp.onclick = function signUp(event) {
+  if (
+    secondName.value.trim() !== "" &&
+    firstName.value.trim() !== "" &&
+    emailSignUp.value.trim() !== "" &&
+    confirmEmail.value.trim() == emailSignUp.value &&
+    passwordSignUp.value.trim() !== ""
+  ) {
+    validateInput();
+    alert("Inscription réussite");
+  } else {
+    validateInput();
+    alert("Vous devez renseigner les champs manquant");
+    event.preventDefault();
+  }
+  //   event.preventDefault();
+};
+
+buttonLogin.onclick = function login(event) {
+  if (emailLogin.value.trim() !== "" && passwordLogin.value.trim() !== "") {
+    validateInputLogin();
+    // alert("Connexion réussite");
+  } else {
+    validateInputLogin();
+    alert("Vous devez renseigner les champs manquant");
+    event.preventDefault();
+  }
+};
 
 function onError(input, message) {
   parent = input.parentElement;
