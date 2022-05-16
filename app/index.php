@@ -65,6 +65,7 @@
                 placeholder="Prénom"
                  value="<?php if(isset($firstname)){ echo $firstname; }?>"
               />
+              <br>
               <small>error</small>
             </div>
 
@@ -76,6 +77,7 @@
                 placeholder="Nom de famille"
                  value="<?php if(isset($secondname)){ echo $secondname; }?>"
               />
+               <br>
               <small>error</small>
             </div>
           </div>
